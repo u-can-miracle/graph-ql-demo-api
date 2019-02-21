@@ -18,7 +18,7 @@
 		"no-submodule-imports": false,
 		"member-access": false,
 		"one-line": [true, "check-catch", "check-finally", "check-else"],
-		"space-before-function-paren": [true, "never"],
+		"space-before-function-paren": [false, "never"],
 		"whitespace": [true, "check-module"],
 		"space-before-blocks": [true, "never"]
   }

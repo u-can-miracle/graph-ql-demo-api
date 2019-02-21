@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb'
 
 const url = 'mongodb://mongo:27017'
-const dbName = 'dbName'
+export const dbName = 'graphql'
 
 const options = {
 	useNewUrlParser: true,
@@ -19,20 +19,19 @@ const db = {
 			if(err){
 				// tslint:disable-next-line
 				console.log('err', err)
-				return
 			}
 			// tslint:disable-next-line
 			console.log("Connected successfully to mongo")
 
 			mongoDb = client.db(dbName)
-
-			// client.close()
 		})
 	},
 	getDb: () => {
 		return mongoDb
 	}
 }
+
+db.connect()
 
 // Use connect method to connect to the server
 export default db

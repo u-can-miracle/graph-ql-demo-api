@@ -1,11 +1,10 @@
 import * as express from 'express'
 import db from './db/init'
+import gqlExpress from './graphql'
 
 const app = express()
 
-setTimeout(() => {
-	db.connect()
-}, 2500)
+app.use('/graphql', gqlExpress)
 
 app.get('/', (req, res) => {
 	// tslint:disable-next-line
